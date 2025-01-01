@@ -1,3 +1,4 @@
 # Kokoa Clone update
 
-CSS got so much better
+css got so much better
+html got so much better
