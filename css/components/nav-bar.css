@@ -16,11 +16,6 @@
     color: #2e363e;
     position: relative;
 }
-.status-bar{
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-}
 .nav__notification{
     background-color: red;
     color: white;

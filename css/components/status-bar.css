@@ -2,11 +2,40 @@
     display: flex; /* 한 줄에 */
     justify-content: space-between; /* 화면에 맞춰 띄워놓음. 각 요소의 크기에 영향을 받음 */
     padding: 5px 3px;
-    background-color: red;
+    background-color: white;
+
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
 }
-.status-bar:first-child span{
+.status-bar__column:first-child span{
     margin-right: 5px;
 }
 .status-bar__column .fa-battery-full{
     margin-right: 5px;
 }
+
+
+/* ======================teacher's code======================== */
+/* .status-bar {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+} */
