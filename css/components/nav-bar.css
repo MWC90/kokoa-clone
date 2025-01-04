@@ -1,0 +1,46 @@
+.nav{
+    position: fixed;  /* 스크롤해도 위치 고정(화면에서 안 나감) */
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 20px 50px;
+    box-sizing: border-box;  /* padding을 줘도 box사이즈를 늘리지 말라는 뜻 */
+    /* 윗 줄은 padding때문에 삐져나간 아이콘들을 다시 화면 안으로 맞춤 */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+}
+.nav__link{
+    color: #2e363e;
+    position: relative;
+}
+.status-bar{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+}
+.nav__notification{
+    background-color: red;
+    color: white;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    position: absolute;  /* 겹침. 이거는 가장 가까운 relative를 가진 부모 기준으로 움직임 */
+    left: 13px;
+    bottom: 8px;
+}
+.nav__update{
+    background-color: red;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+}

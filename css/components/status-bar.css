@@ -2,12 +2,10 @@
     display: flex; /* 한 줄에 */
     justify-content: space-between; /* 화면에 맞춰 띄워놓음. 각 요소의 크기에 영향을 받음 */
     padding: 5px 3px;
+    background-color: red;
 }
 .status-bar:first-child span{
     margin-right: 5px;
-}
-.status-bar:nth-child(2){
-    justify-content: center;
 }
 .status-bar__column .fa-battery-full{
     margin-right: 5px;
