@@ -1,7 +1,30 @@
 #friends-display-link{
+    text-align: center;  /* display: block을 하니까 적용됨 */
     display: block;
-    text-align: center;
     background-color: #fafafa;
     padding-top: 115px;
     padding-bottom: 12px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* icon색을 바꾸는게 가능(text라고 생각하면 됨) */
+#friends-display-link i{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.friends-screen{
+    padding: 0px var(--horizontal-space);
+}
+.friends-screen__channel{
+    margin-top: 20px;
+    border-top: solid 2px rgb(0, 0, 0, 0.1);
+    padding-top: 10px;
+}
+.friends-screen__channel-header{
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0, 0.4);
+    display: flex;   /* 이게 있어야 space-between이 가능 */
+    justify-content: space-between;
+    align-items: center;
 }
