@@ -2,7 +2,7 @@
     position: fixed;  /* 스크롤해도 위치 고정(화면에서 안 나감) */
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgb(248, 248, 248);
     padding: 20px 50px;
     box-sizing: border-box;  /* padding을 줘도 box사이즈를 늘리지 말라는 뜻 */
     /* 윗 줄은 padding때문에 삐져나간 아이콘들을 다시 화면 안으로 맞춤 */

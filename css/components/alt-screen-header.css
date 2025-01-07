@@ -1,0 +1,49 @@
+.alt-header{
+    padding: 40px var(--horizontal-space) 0px var(--horizontal-space);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;  /* fixed를 했을때 풀리는걸 다시 잡음 */
+    box-sizing: border-box;  /* 풀린걸 잡고나서 밖으로 삐져나가는걸 정상화(화면 크기에맞춰) */
+    background-color: white;
+}
+.alt-header__title{
+    font-size: 25px;
+    font-weight: 550;
+}
+
+.alt-header__column:first-child{
+    margin-right: auto;
+}
+.alt-header__column:last-child{
+    margin-left: auto;
+}
+/* ***hack(중앙 정렬) / 시간은 이렇게 안해서 완벽한 중앙이 아님***
+.alt-header__column:first-child{
+    margin-right: auto;
+}
+.alt-header__column:last-child{
+    margin-left: auto;
+}
+     */
+/* .alt-main-screen{
+    padding: 0px var(--horizontal-space);
+
+} */
+.alt-header__column span:last-child{
+    margin-left: 15px;
+}
+
+/* 정중앙 나열 hack */
+
+.alt-header__column{
+    width: 33%;
+}
+.alt-header__column:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+.alt-header__column:nth-child(2){
+    text-align: center;
+}

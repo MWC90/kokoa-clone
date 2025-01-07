@@ -1,0 +1,100 @@
+#chat-screen{
+    background-color: #abc1d1;
+}
+#chat-screen .status-bar{
+    background-color: #abc1d1;
+}
+#chat-screen .alt-header{
+    background-color: #abc1d1;
+}
+#chat-screen .main-chat{
+    padding-top: 100px;
+}
+/* 
+***** z-index의 기본값은 0. 이거로 레이어의 순서 조절 가능 (나는 html코드 순서를 바꿔서 해결했는데 앞으론 이렇게)
+***** ex) status-bar와 header의 레이어 순서
+***** 수가 높을수로 우리한테 가까움(보임)
+#chat-screen .alt-header{
+    z-index: 1;
+}
+#chat-screen .status-bar{
+    z-index: 2;
+}
+*/
+.main-chat{
+    display: flex;
+    flex-direction: column;
+    /* flexdiraction이 column일 때, cross axis는 수평이 된다 */
+    align-items: center;
+}
+.chat__timestamp{
+    color: white;
+    background-color: #92a4b2;
+    display: flex;
+    padding: 8px 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.message-row{
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+.message-row img{
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    margin-right: 8px;
+}
+.message__author{
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.message__bubble{
+    background-color: white;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+}
+.message__info{
+    display: flex;
+    align-items: flex-end;
+}
+.message__time{
+    margin-left: 5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.message-row--own{
+    /* message-row(동일 클래스)에 이미 display:flex가 되어있어서 아래의 코드 바로 실행 가능 */
+    justify-content: flex-end;
+}
+.message-row--own .message__bubble{
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+}
+.message-row--own .message__time{
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+/* 순서 변경 (html에서 순서를 바꾸는것과 동일) */
+/* 1번 방법
+.message-row--own .message__bubble{
+    order: 1;
+}
+.message-row--own .message__time{
+    order: 0;
+} 
+*/
+ /* 2번 방법 */
+.message-row--own .message__info{
+        /* message-row(동일 클래스)에 이미 display:flex가 되어있어서 아래의 코드 바로 실행 가능 */
+    flex-direction: row-reverse;
+}

@@ -5,19 +5,20 @@
    <link rel="stylesheet" href="css/styles.css">
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Chats - Kokoa Talk</title>
+   <title>More - Kokoa Talk</title>
 </head>
 <body>
    <header class="screen-header">
-    <h1 class="screen-header__title">Chats</h1>
+    <h1 class="screen-header__title">More</h1>
     <div class="screen-header__icons">
         <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-        <span><i class="fa-solid fa-comment-medical fa-lg"></i></span>
         <span><i class="fa-solid fa-music fa-lg"></i></span>
         <span>
             <a href="settings.html">
-            <i class="fa-solid fa-cog fa-lg"></i>
-        </a>
+             <i class="fa-solid fa-cog fa-lg fa-find">
+                  <div class="update-point"></div>
+              </i>
+            </a>
         </span>
     </div>
    </header>
@@ -38,27 +39,61 @@
     </div>
    </div>
 
-    <main class="main-screen">
-        <a href="chat.html">
+    <main class="main-screen more-screen">
         <div class="user-component">
             <!-- 단축키:   .user-component__column*2 -->
             <div class="user-component__column">
                 <img 
                 src="https://avatars.githubusercontent.com/u/155869830?v=4&size=64" 
-                class="user-component__avatar user-component__avatar" />
+                class="user-component__avatar user-component__avatar--xl" />
                 <div class="user-component__text">
                     <h4 class="user-component__title">MWC</h4>
                     <h6 class="user-component__subtitle">
-                        Please check My Kokoa Account Info
+                        010-1234-5678
+                        <div class="unchecked-mark">!</div>
                     </h6>
+                    
                 </div>
             </div>
             <div class="user-component__column">
-                <span class="user-component__time">20:09</span>
-                <div class="badge">1</div>
+                <i class="fa-regular fa-message fa-2x"></i>
             </div>
         </div>
-    </a>
+        <div class="icon-row">
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-calendar-days fa-xl"></i>
+                <span>Calender</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-regular fa-face-smile fa-xl"></i>
+                <span>Emoticons</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-paint-roller fa-xl"></i>
+                <span>Themes</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-file-invoice fa-xl"></i>
+                <span>Account</span>
+            </div>
+        </div>
+        <div class="more-suggestions">
+            <h4 class="more-suggestions__title">Suggestions</h4>
+            <div class="more-suggestions__icons">
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fa-solid fa-quote-right fa-2x"></i>
+                    </div>
+                    <span class="more-suggestions__icon-text">Kokoa Story</span>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fa-solid fa-quote-right fa-2x"></i>
+                    </div>
+                    <span class="more-suggestions__icon-text">Kokoa Story</span>
+                </div>
+            </div>
+        </div>
     </main>
 
    <!-- 단축키: nav>ul>li*4>a -->
@@ -71,11 +106,13 @@
         <li class="nav__btn">
             <a class="nav__link" href="chats.html">
                 <span class="nav__notification badge">1</span>
-                <i class="fa-solid fa-comment fa-lg"></i>
+                <i class="fa-regular fa-comment fa-lg"></i>
             </a>
         </li>
         <li class="nav__btn">
-            <a class="nav__link" href="find.html"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a>
+            <a class="nav__link" href="find.html">
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </a>
         </li>
         <li class="nav__btn">
             <a class="nav__link" href="more.html">

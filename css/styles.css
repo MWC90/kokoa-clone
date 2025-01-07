@@ -11,11 +11,18 @@
 @import "components/nav-bar.css";
 @import "components/user-component.css";
 @import "components/badge.css";
+@import "components/update-point.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
 
 /* screens */
 @import "screens/login.css";
 @import "screens/friends.css";
 @import "screens/chats.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
 
 body{
     /* font-family는 그냥 글꼴 바꾸는거. 아무거나 골라 */
@@ -25,5 +32,8 @@ body{
 
 }
 .main-screen{
-    padding: 0px var(--horizontal-space);
+    padding: 130px var(--horizontal-space) 0px var(--horizontal-space);
+}
+.alt-main-screen{
+    padding: 90px var(--horizontal-space) 0px var(--horizontal-space);
 }

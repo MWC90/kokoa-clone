@@ -34,6 +34,8 @@
     margin: 8px 0px;
     font-size: 17px;
     color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
 }
 .user-component__column:nth-child(2){
     color: rgb(0, 0, 0, 0.4);
@@ -44,4 +46,7 @@
 .user-component__time{
     display: block;
     margin-bottom: 5px;
+}
+.user-component__more{
+    margin-bottom: 35px;
 }
