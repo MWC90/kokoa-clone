@@ -17,16 +17,6 @@
     position: relative;
 }
 .nav__notification{
-    background-color: red;
-    color: white;
-    display: block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
     position: absolute;  /* 겹침. 이거는 가장 가까운 relative를 가진 부모 기준으로 움직임 */
     left: 13px;
     bottom: 8px;
