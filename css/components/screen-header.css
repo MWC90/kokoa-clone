@@ -15,3 +15,17 @@
 .screen-header__icons span{
     margin-left: 20px;
 }
+@keyframes rotateCog {
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: rotateY(90deg);
+    }
+    100%{
+        transform: none;
+    }
+}
+.screen-header__icons i:hover{
+    animation: rotateCog 1s linear infinite;
+}

@@ -85,3 +85,21 @@
 .open-post__heart-count span{
     margin-left: 5px;
 }
+@keyframes heartBeat {
+    0%{
+        color:white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(1.5);    /* will-change없이는 뭔가 흔들림(크기 계산에 이상?) */
+    }
+    100%{
+        color: white;
+        transform: none;
+    }
+}
+.open-post__heart-count:hover i{  /* .open-post__heart-count의 어디에 마우스를 올려도 i에만 적용 */
+    will-change: transform;   /* 브라우저에게 뭔가가 바뀔거라고 말함. 이렇게 말 해놓으면 브라우저가 좀 더 편해짐 */
+    animation: heartBeat 1s linear infinite;
+}

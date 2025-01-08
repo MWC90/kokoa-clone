@@ -28,3 +28,30 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@keyframes hideSplashScreen {
+    from{
+        opacity: 1;
+    }
+    to{
+        /* 
+        display: none;     이거도 클릭 안됨
+        */
+        opacity: 0;    /* 클릭은 안됨 */
+        visibility: hidden;   /* 이거는 클릭 됨 */
+    }
+}
+
+#splash-screen{
+    background-color: var(--yellow);
+    position: fixed;
+    height: 100vh;   /* 화면 높이의 100% */
+    width: 100vw;   /* 화면 넓이의 100% */
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 90px;
+    animation: hideSplashScreen 0.4s ease-in-out forwards;   /* forwards: 마지막 속성이 애니매이션 끝나고도 유지 */
+    animation-delay: 0.7s;
+}

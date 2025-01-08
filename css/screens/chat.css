@@ -21,11 +21,53 @@
     z-index: 2;
 }
 */
+
+/* @keyframes fadeIn {
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+} */
+@keyframes messageFadeInRight {
+    from{
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes messageFadeInLeft {
+    from{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes messageFadeInDown {
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
 .main-chat{
     display: flex;
     flex-direction: column;
-    /* flexdiraction이 column일 때, cross axis는 수평이 된다 */
+    /* flex direction이 column일 때, cross axis는 수평이 된다 */
     align-items: center;
+    /* animation: fadeIn 0.3s linear; */
 }
 .chat__timestamp{
     color: white;
@@ -36,12 +78,14 @@
     align-items: center;
     border-radius: 20px;
     margin-bottom: 25px;
+    animation: messageFadeInDown 0.5s ease-in-out;
 }
 
 .message-row{
     width: 100%;
     display: flex;
     margin-bottom: 25px;
+    animation: messageFadeInRight 0.5s ease-in-out;
 }
 .message-row img{
     width: 50px;
@@ -73,6 +117,7 @@
 .message-row--own{
     /* message-row(동일 클래스)에 이미 display:flex가 되어있어서 아래의 코드 바로 실행 가능 */
     justify-content: flex-end;
+    animation: messageFadeInLeft 0.5s ease-in-out;
 }
 .message-row--own .message__bubble{
     background-color: var(--yellow);
@@ -97,4 +142,77 @@
 .message-row--own .message__info{
         /* message-row(동일 클래스)에 이미 display:flex가 되어있어서 아래의 코드 바로 실행 가능 */
     flex-direction: row-reverse;
+}
+
+.reply{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+.reply .reply__column:first-child{
+    width: 10%;
+}
+.reply .reply__column:last-child{
+    width:90%;
+    position: relative;
+}
+.reply i{
+    color: rgba(0, 0, 0, 0.5)
+}
+.reply input{
+    padding: 10px;
+    width: 100%;
+    border: var(--main-border);
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button{
+    position: absolute;
+    right: 3px;
+    top: 4.7px;
+}
+.reply__column:last-child > i{
+    right:45px;
+    top: 12px;
+}
+.reply__column button{
+    background-color: var(--yellow);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.reply__column button i{
+    color: rgba(0, 0, 0, 1);
+}
+.reply__column button:focus,
+.reply__column button:active{
+    outline: none;
+}
+.reply .reply__column:first-child,
+.reply .fa-face-smile,
+.reply button{
+    transition: opacity 1s ease-in-out;
+}
+.reply:focus-within .reply__column:first-child,   /* reply내부에 어떤 element가 focus되어있다면 */
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button{
+    opacity: 0;
+    visibility: hidden;
+}
+.reply:focus-within input{
+    width: 93vw;
+    transform: translateX(-13%) translateY(-80px);   /* 위에서 +버튼이 10%만큼 차지하라고 선언했기때문 */
+}
+.reply:focus-within{
+    transform: translateY(80px);
 }
